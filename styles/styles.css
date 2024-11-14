@@ -33,7 +33,7 @@ body {
 }
 
 .sidebar h2 {
-    font-size: 2em;
+    font-size: 1.8em; /* Slightly smaller font size for sidebar header */
     margin-bottom: 30px;
     color: #66ff66;
 }
@@ -94,4 +94,69 @@ hr {
     width: calc(100% - 60px);
     margin: 0 auto;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
-    transition: transform 
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    background-color: #333333; /* Slightly lighter background on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.post-card h3 {
+    font-size: 2em; /* Slightly smaller font for titles */
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #66ff66;
+}
+
+.post-card h3 .hashtag {
+    font-size: 1em; /* Matching the font size of body text */
+    color: #b3b3b3;
+}
+
+.post-card .description {
+    color: #b3b3b3;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+.post-card .date {
+    font-size: 1em;
+    color: #888;
+    margin-top: 10px;
+}
+
+/* Tag Styles (e.g., #Podcast, #Mixed-Podcast) */
+.hashtag {
+    display: inline-block;
+    background-color: #333;
+    color: #66ff66;
+    padding: 3px 8px;
+    margin-right: 8px;
+    border-radius: 4px;
+    font-size: 1em; /* Set to body text size */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 20px;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .post-card {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
