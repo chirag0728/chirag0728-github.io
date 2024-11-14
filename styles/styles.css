@@ -7,12 +7,13 @@
 
 body {
     font-family: 'PT Mono', monospace;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #121212;  /* Dark background */
+    color: #b3b3b3;  /* Light text color for readability */
     line-height: 1.8;
     font-size: 18px; /* Larger base font size */
 }
 
+/* Container for alignment */
 .container {
     display: flex;
     max-width: 1200px;
@@ -24,8 +25,8 @@ body {
 .sidebar {
     width: 250px;
     padding: 20px;
-    background-color: #1a1a1a;
-    color: #fff;
+    background-color: #1a1a1a; /* Slightly lighter than background */
+    color: #66ff66; /* Terminal green for headers */
     position: sticky;
     top: 0;
     height: 100vh;
@@ -47,7 +48,7 @@ body {
 }
 
 .nav-links li a, .external-links li a {
-    color: #33cc33; /* Terminal green */
+    color: #33cc33; /* Terminal green for links */
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
@@ -56,7 +57,7 @@ body {
 }
 
 .nav-links li a:hover, .external-links li a:hover {
-    color: #66ff66; /* Lighter green on hover */
+    color: #66ff66; /* Brighter green on hover */
 }
 
 hr {
@@ -75,7 +76,7 @@ hr {
 header h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #333;
+    color: #66ff66; /* Terminal green for main header */
 }
 
 #posts-container {
@@ -86,8 +87,8 @@ header h1 {
 
 /* Post Card Styles */
 .post-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #222; /* Dark card background */
+    border: 1px solid #333; /* Subtle border for cards */
     border-radius: 8px;
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -96,22 +97,22 @@ header h1 {
 
 .post-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .post-card h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
-    color: #33cc33; /* Terminal green */
+    color: #66ff66; /* Terminal green */
 }
 
 .post-card h3 .hashtag {
     font-size: 0.85em;
-    color: #66ff66; /* Lighter green for hashtags */
+    color: #b3b3b3; /* Slightly lighter gray for hashtags */
 }
 
 .post-card .description {
-    color: #555;
+    color: #999; /* Light gray for descriptions */
     font-size: 1.1em;
     margin-bottom: 10px;
 }
@@ -141,27 +142,27 @@ header h1 {
 #post-content {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #222; /* Dark background for post content */
     border-radius: 8px;
     padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     line-height: 1.8;
-    font-size: 1.1em;
+    color: #b3b3b3; /* Lighter text for readability */
 }
 
 #post-content h1, #post-content h2, #post-content h3 {
-    color: #333;
+    color: #66ff66; /* Terminal green for post headers */
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
 #post-content p {
     margin-bottom: 15px;
-    color: #555;
+    color: #b3b3b3;
 }
 
 #post-content a {
-    color: #33cc33; /* Terminal green */
+    color: #33cc33; /* Terminal green for links */
     text-decoration: none;
     transition: color 0.3s ease;
 }
