@@ -3,28 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Home</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts/main.js" defer></script>
+    <title>Challenge Notes</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <h1>My Blog</h1>
-    <div class="post-cards">
-        <div class="post-card" data-id="post1">
-            <h2>Post 1 Title</h2>
-            <p>Summary of post 1...</p>
-            <button>Read More</button>
-        </div>
-        <div class="post-card" data-id="post2">
-            <h2>Post 2 Title</h2>
-            <p>Summary of post 2...</p>
-            <button>Read More</button>
-        </div>
-        <div class="post-card" data-id="post3">
-            <h2>Post 3 Title</h2>
-            <p>Summary of post 3...</p>
-            <button>Read More</button>
-        </div>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Sidebar Navigation">
+            <h2>Challenge Hub</h2>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#" onclick="filterPosts('all')">Home</a></li>
+                    <li><a href="#" onclick="filterPosts('blog')">Blog</a></li>
+                    <li><a href="#" onclick="filterPosts('challenges')">Challenges</a></li>
+                    <li><a href="#" onclick="filterPosts('tools')">Tools</a></li>
+                    <li><a href="#" onclick="filterPosts('resources')">Resources</a></li>
+                </ul>
+            </nav>
+            <hr>
+            <ul class="external-links">
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Discord</a></li>
+                <li><a href="#">GitHub</a></li>
+                <li><a href="#">RSS Feed</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content" aria-label="Main Content">
+            <header>
+                <h1>Challenge Notes</h1>
+            </header>
+            <section id="posts-container" aria-label="Posts Container">
+                <!-- Sample Post Cards with expandable content -->
+                <article class="post-card" data-category="blog" data-tags="web security">
+                    <h3 onclick="togglePostContent(this)">Understanding SQL Injection <span class="hashtag">#Web</span></h3>
+                    <p class="description">A brief overview of SQL injection techniques.</p>
+                    <p class="date">Posted: Oct 5, 2023</p>
+                    <!-- Hidden full content section -->
+                    <div class="post-full-content" style="display: none;">
+                        <p>In this post, we explore SQL Injection, a technique used to exploit web application vulnerabilities. We cover the basics, prevention techniques, and tools like sqlmap and Burp Suite for testing.</p>
+                    </div>
+                </article>
+                <article class="post-card" data-category="challenges" data-tags="linux privilege">
+                    <h3 onclick="togglePostContent(this)">Privilege Escalation in Linux <span class="hashtag">#Privilege Escalation</span></h3>
+                    <p class="description">Learned techniques to escalate privileges in Linux environments.</p>
+                    <p class="date">Posted: Oct 12, 2023</p>
+                    <!-- Hidden full content section -->
+                    <div class="post-full-content" style="display: none;">
+                        <p>This challenge focused on privilege escalation techniques in Linux, covering SUID files, cron jobs, and tools like LinPEAS to identify vulnerabilities.</p>
+                    </div>
+                </article>
+            </section>
+        </main>
     </div>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
