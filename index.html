@@ -32,17 +32,21 @@
         <!-- Main Content Area -->
         <main class="content" aria-label="Main Content">
             <section id="posts-container" aria-label="Posts Container">
-                <!-- Sample Post Cards with expandable content -->
-                <article class="post-card" data-id="post1" data-category="blog" data-tags="web security">
-                    <h3 onclick="togglePostContent(this)">262 - Understanding SQL Injection <span class="hashtag">#Web</span></h3>
-                    <p class="description">A detailed exploration of SQL injection techniques, including defense strategies and tools.</p>
-                    <p class="date">Posted: 11 November 2024</p>
-                </article>
-                <article class="post-card" data-id="post2" data-category="challenges" data-tags="linux privilege">
-                    <h3 onclick="togglePostContent(this)">261 - Privilege Escalation in Linux <span class="hashtag">#Privilege Escalation</span></h3>
-                    <p class="description">An in-depth guide on privilege escalation methods in Linux environments.</p>
-                    <p class="date">Posted: 04 November 2024</p>
-                </article>
+                <!-- Each post card is now clickable and will lead to a separate page -->
+                <a href="post.html?id=post1" class="post-card-link">
+                    <article class="post-card" data-id="post1" data-category="blog" data-tags="web security">
+                        <h3>Understanding SQL Injection <span class="hashtag">#Web</span></h3>
+                        <p class="description">A detailed exploration of SQL injection techniques, including defense strategies and tools.</p>
+                        <p class="date">Posted: 11 November 2024</p>
+                    </article>
+                </a>
+                <a href="post.html?id=post2" class="post-card-link">
+                    <article class="post-card" data-id="post2" data-category="challenges" data-tags="linux privilege">
+                        <h3>Privilege Escalation in Linux <span class="hashtag">#Privilege Escalation</span></h3>
+                        <p class="description">An in-depth guide on privilege escalation methods in Linux environments.</p>
+                        <p class="date">Posted: 04 November 2024</p>
+                    </article>
+                </a>
             </section>
         </main>
     </div>
