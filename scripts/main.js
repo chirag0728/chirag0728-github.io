@@ -9,7 +9,7 @@ function viewFullPost(postId) {
     window.location.href = `post.html?post=${postId}`;
 }
 
-// Event listeners for filtering posts based on categories (if filter function is implemented)
+// Event listeners for filtering posts based on categories
 function filterPosts(category) {
     const allPosts = document.querySelectorAll(".post-card");
 
@@ -22,7 +22,7 @@ function filterPosts(category) {
     });
 }
 
-// DOMContentLoaded event to attach click event listeners for read full post buttons
+// DOMContentLoaded event to attach click event listeners
 document.addEventListener("DOMContentLoaded", function() {
     const readMoreButtons = document.querySelectorAll(".post-card button");
 
