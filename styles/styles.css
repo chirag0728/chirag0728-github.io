@@ -79,7 +79,7 @@ hr {
 #posts-container {
     display: flex;
     flex-direction: column;
-    gap: 30px; /* Space between post cards */
+    gap: 20px; /* Space between post cards */
 }
 
 /* Full-Width Post Card Styles */
@@ -93,6 +93,7 @@ hr {
     border-radius: 8px; /* Rounded corners */
     padding: 25px 20px; /* Internal padding */
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    width: 100%; /* Ensures the post card takes full width of container */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
@@ -103,7 +104,7 @@ hr {
 }
 
 .post-card h3 {
-    font-size: 1.9em; /* Large and bold title */
+    font-size: 1.8em; /* Large and bold title */
     font-weight: bold;
     margin-bottom: 10px;
     color: #f5f5f5; /* Light color for title */
