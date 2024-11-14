@@ -10,7 +10,7 @@ body {
     background-color: #121212;  /* Dark background */
     color: #b3b3b3;  /* Light text color */
     line-height: 1.6;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 /* Container for the sidebar and content */
@@ -22,9 +22,9 @@ body {
 
 /* Sidebar Styles */
 .sidebar {
-    width: 270px; /* Wider sidebar for emphasis */
-    background-color: #1a1a1a; /* Dark sidebar */
-    color: #66ff66; /* Terminal green */
+    width: 270px;
+    background-color: #1a1a1a;
+    color: #66ff66;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -33,7 +33,7 @@ body {
 }
 
 .sidebar h2 {
-    font-size: 2.5em; /* Large font size for prominent header */
+    font-size: 2.5em;
     margin-bottom: 30px;
     color: #66ff66;
 }
@@ -44,21 +44,21 @@ body {
 }
 
 .nav-links li, .external-links li {
-    margin-bottom: 20px; /* Increased spacing for readability */
+    margin-bottom: 20px;
 }
 
 .nav-links li a, .external-links li a {
-    color: #33cc33; /* Terminal green for links */
+    color: #33cc33;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.5em; /* Larger font size for sidebar links */
+    font-size: 1.5em;
     display: inline-block;
     padding: 5px 0;
     transition: color 0.3s ease;
 }
 
 .nav-links li a:hover, .external-links li a:hover {
-    color: #66ff66; /* Brighter green on hover */
+    color: #66ff66;
 }
 
 hr {
@@ -72,7 +72,7 @@ hr {
 .content {
     flex: 1;
     padding: 30px;
-    margin-left: 290px; /* Offset for the fixed sidebar */
+    margin-left: 290px;
 }
 
 #posts-container {
@@ -81,35 +81,39 @@ hr {
     gap: 35px;
 }
 
-/* Post Card Styles */
+/* Enhanced Post Card Styles */
 .post-card {
-    background-color: #222; /* Dark card background */
-    border: 1px solid #333;
+    background-color: #1e1e1e;
+    border: 2px solid #333;
     border-radius: 8px;
-    padding: 25px;
+    padding: 30px;
+    width: 100%;
+    max-width: 1000px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .post-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
 }
 
 .post-card h3 {
-    font-size: 2.2em; /* Large font for titles */
+    font-size: 2.2em;
     font-weight: bold;
     margin-bottom: 15px;
-    color: #66ff66; /* Terminal green */
+    color: #66ff66;
 }
 
 .post-card h3 .hashtag {
-    font-size: 1em; /* Slightly smaller font for tags */
-    color: #b3b3b3; /* Light gray for hashtags */
+    font-size: 1em;
+    color: #b3b3b3;
 }
 
 .post-card .description {
-    color: #b3b3b3; /* Light gray for descriptions */
-    font-size: 1.3em; /* Larger font for readability */
+    color: #b3b3b3;
+    font-size: 1.3em;
     margin-bottom: 20px;
 }
 
@@ -127,7 +131,7 @@ hr {
     padding: 3px 8px;
     margin-right: 8px;
     border-radius: 4px;
-    font-size: 1em; /* Consistent with smaller tag font */
+    font-size: 1em;
 }
 
 /* Responsive Styles */
