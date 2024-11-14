@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Notes</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Sidebar Navigation">
+            <h2>Challenge Hub</h2>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#" onclick="filterPosts('all')">Home</a></li>
+                    <li><a href="#" onclick="filterPosts('blog')">Blog</a></li>
+                    <li><a href="#" onclick="filterPosts('challenges')">Challenges</a></li>
+                    <li><a href="#" onclick="filterPosts('tools')">Tools</a></li>
+                    <li><a href="#" onclick="filterPosts('resources')">Resources</a></li>
+                </ul>
+            </nav>
+            <hr>
+            <ul class="external-links">
+                <li><a href="#">Hack The Box</a></li>
+                <li><a href="#">pwn.college</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Discord</a></li>
+                <li><a href="#">GitHub</a></li>
+                <li><a href="#">RSS Feed</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content" aria-label="Main Content">
+            <header>
+                <h1>Challenge Notes</h1>
+            </header>
+            <section id="posts-container" aria-label="Posts Container">
+                <!-- Sample Post Cards -->
+                <article class="post-card" data-category="blog" data-tags="web security">
+                    <h3>Understanding SQL Injection <span class="hashtag">#Web</span></h3>
+                    <p class="description">A deep dive into SQL injection techniques and prevention.</p>
+                    <p class="date">Posted: Oct 5, 2023</p>
+                </article>
+                <article class="post-card" data-category="challenges" data-tags="linux privilege">
+                    <h3>Privilege Escalation in Linux <span class="hashtag">#Privilege Escalation</span></h3>
+                    <p class="description">Learned techniques to escalate privileges in Linux environments.</p>
+                    <p class="date">Posted: Oct 12, 2023</p>
+                </article>
+            </section>
+        </main>
+    </div>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
