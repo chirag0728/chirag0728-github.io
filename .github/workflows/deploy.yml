@@ -1,0 +1,40 @@
+name: Deploy to GitHub Pages
+
+# Trigger the workflow on push to the main branch
+on:
+  push:
+    branches:
+      - main
+
+# Set permissions, including id-token write access
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Set up Node.js if you're using Node-based tools (optional)
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14' # or any other version your project requires
+
+      # Install dependencies if needed
+      - name: Install dependencies
+        run: npm install
+
+      # Build the static files for your site (optional, if needed)
+      - name: Build project
+        run: npm run build # or your specific build command, e.g., `yarn build`
+
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
