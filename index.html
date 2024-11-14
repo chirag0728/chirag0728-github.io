@@ -23,7 +23,6 @@
             </nav>
             <hr>
             <ul class="external-links">
-                <!-- Removed Hack The Box and pwn.college links -->
                 <li><a href="#">Twitter</a></li>
                 <li><a href="#">Discord</a></li>
                 <li><a href="#">GitHub</a></li>
@@ -37,16 +36,24 @@
                 <h1>Challenge Notes</h1>
             </header>
             <section id="posts-container" aria-label="Posts Container">
-                <!-- Sample Post Cards -->
+                <!-- Sample Post Cards with expandable content -->
                 <article class="post-card" data-category="blog" data-tags="web security">
-                    <h3>Understanding SQL Injection <span class="hashtag">#Web</span></h3>
-                    <p class="description">A deep dive into SQL injection techniques and prevention.</p>
+                    <h3 onclick="togglePostContent(this)">Understanding SQL Injection <span class="hashtag">#Web</span></h3>
+                    <p class="description">A brief overview of SQL injection techniques.</p>
                     <p class="date">Posted: Oct 5, 2023</p>
+                    <!-- Hidden full content section -->
+                    <div class="post-full-content" style="display: none;">
+                        <p>In this post, we explore SQL Injection, a technique used to exploit web application vulnerabilities. We cover the basics, prevention techniques, and tools like sqlmap and Burp Suite for testing.</p>
+                    </div>
                 </article>
                 <article class="post-card" data-category="challenges" data-tags="linux privilege">
-                    <h3>Privilege Escalation in Linux <span class="hashtag">#Privilege Escalation</span></h3>
+                    <h3 onclick="togglePostContent(this)">Privilege Escalation in Linux <span class="hashtag">#Privilege Escalation</span></h3>
                     <p class="description">Learned techniques to escalate privileges in Linux environments.</p>
                     <p class="date">Posted: Oct 12, 2023</p>
+                    <!-- Hidden full content section -->
+                    <div class="post-full-content" style="display: none;">
+                        <p>This challenge focused on privilege escalation techniques in Linux, covering SUID files, cron jobs, and tools like LinPEAS to identify vulnerabilities.</p>
+                    </div>
                 </article>
             </section>
         </main>
