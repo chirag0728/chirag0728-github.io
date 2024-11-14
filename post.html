@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chirag's Portfolio</title>
+    <title>Post Title - Chirag's Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
@@ -11,41 +11,55 @@
     <div class="container">
         <!-- Sidebar -->
         <aside class="sidebar" aria-label="Sidebar Navigation">
-            <h2>Chirag's Portfolio</h2>
+            <img src="images/logo.png" alt="Portfolio Logo" class="logo-image">
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#" onclick="filterPosts('all')">Home</a></li>
-                    <li><a href="#" onclick="filterPosts('blog')">Blog</a></li>
-                    <li><a href="#" onclick="filterPosts('challenges')">Challenges</a></li>
-                    <li><a href="#" onclick="filterPosts('tools')">Tools</a></li>
-                    <li><a href="#" onclick="filterPosts('resources')">Resources</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Podcast</a></li>
+                    <li><a href="#">Vulns</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
             <hr>
             <ul class="external-links">
+                <li><a href="#">Twitch</a></li>
+                <li><a href="#">YouTube</a></li>
+                <li><a href="#">Twitter</a></li>
                 <li><a href="#">Discord</a></li>
                 <li><a href="#">GitHub</a></li>
+                <li><a href="#">Listen</a></li>
                 <li><a href="#">RSS Feed</a></li>
             </ul>
         </aside>
 
-        <!-- Main Content Area -->
-        <main class="content" aria-label="Main Content">
-            <section id="posts-container" aria-label="Posts Container">
-                <!-- Sample Post Cards with enhanced style -->
-                <article class="post-card" data-id="post1" data-category="blog" data-tags="web security">
-                    <h3 onclick="togglePostContent(this)">Understanding SQL Injection <span class="hashtag">#Web</span></h3>
-                    <p class="description">A detailed exploration of SQL injection techniques, including defense strategies and tools.</p>
-                    <p class="date">Posted: 11 November 2024</p>
-                </article>
-                <article class="post-card" data-id="post2" data-category="challenges" data-tags="linux privilege">
-                    <h3 onclick="togglePostContent(this)">Privilege Escalation in Linux <span class="hashtag">#Privilege Escalation</span></h3>
-                    <p class="description">An in-depth guide on privilege escalation methods in Linux environments.</p>
-                    <p class="date">Posted: 04 November 2024</p>
-                </article>
-            </section>
+        <!-- Main Content Area for Post -->
+        <main class="content" aria-label="Post Content">
+            <article class="post-detail">
+                <h1>Post Title: Static Analysis, LLMs, and Exploit Chains</h1>
+                <div class="post-meta">
+                    <span class="date">Posted: 11 November 2024</span>
+                    <div class="tags">
+                        <span class="hashtag">#Podcast</span>
+                        <span class="hashtag">#Mixed-Podcast</span>
+                    </div>
+                </div>
+                <p>
+                    Here is the detailed content of the post. This section can include a comprehensive
+                    discussion about the topic, complete with examples, references, and links.
+                </p>
+                <p>
+                    For example, this post discusses methodologies in exploit chain analysis and
+                    applications of machine learning models in cybersecurity.
+                </p>
+                <p>
+                    You can add more paragraphs, lists, code snippets, images, and other content to
+                    make each post informative and visually appealing.
+                </p>
+            </article>
+            <a href="index.html" class="back-link">← Back to Home</a>
         </main>
     </div>
-    <script src="scripts/main.js"></script>
 </body>
 </html>
