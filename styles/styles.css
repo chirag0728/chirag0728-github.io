@@ -113,4 +113,14 @@ hr {
     .container {
         flex-direction: column;
     }
+
+    /* Styles for hidden content */
+.post-full-content {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #333;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
 }
