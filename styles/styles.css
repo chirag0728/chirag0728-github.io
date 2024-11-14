@@ -10,7 +10,7 @@ body {
     background-color: #121212;  /* Dark background */
     color: #b3b3b3;  /* Light text color */
     line-height: 1.8;
-    font-size: 16px; /* Base font size similar to terminal */
+    font-size: 18px; /* Larger font for readability */
 }
 
 /* Container with sidebar pushed to extreme left */
@@ -18,25 +18,24 @@ body {
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
 }
 
 /* Sidebar Styles */
 .sidebar {
-    width: 200px;
+    width: 220px;
     background-color: #1a1a1a; /* Dark sidebar */
     color: #66ff66; /* Terminal green */
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    padding: 20px 10px; /* Narrow padding for compact look */
+    padding: 20px;
 }
 
 .sidebar h2 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    color: #66ff66; /* Terminal green */
+    font-size: 1.6em;
+    margin-bottom: 25px;
+    color: #66ff66;
 }
 
 .nav-links, .external-links {
@@ -45,13 +44,14 @@ body {
 }
 
 .nav-links li, .external-links li {
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* Increased spacing for readability */
 }
 
 .nav-links li a, .external-links li a {
     color: #33cc33; /* Terminal green for links */
     text-decoration: none;
     font-weight: bold;
+    font-size: 1em;
     display: inline-block;
     padding: 5px 0;
     transition: color 0.3s ease;
@@ -72,13 +72,13 @@ hr {
 .content {
     flex: 1;
     padding: 20px;
-    margin-left: 220px; /* Offset for the fixed sidebar */
+    margin-left: 240px; /* Offset for the fixed sidebar */
 }
 
 #posts-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 /* Post Card Styles */
@@ -88,7 +88,6 @@ hr {
     border-radius: 8px;
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
 }
 
 .post-card:hover {
@@ -97,26 +96,26 @@ hr {
 }
 
 .post-card h3 {
-    font-size: 1.25em;
+    font-size: 1.5em; /* Larger font for titles */
     margin-bottom: 10px;
     color: #66ff66; /* Terminal green */
 }
 
 .post-card h3 .hashtag {
-    font-size: 0.85em;
+    font-size: 0.9em;
     color: #b3b3b3; /* Light gray for hashtags */
 }
 
 .post-card .description {
-    color: #999; /* Light gray for descriptions */
+    color: #b3b3b3; /* Light gray for descriptions */
     font-size: 1em;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .post-card .date {
     font-size: 0.9em;
     color: #888;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .post-card button {
@@ -134,39 +133,6 @@ hr {
 .post-card button:hover {
     background-color: #333; /* Slightly lighter on hover */
     color: #b3b3b3;
-}
-
-/* Full Post Content Styles */
-#post-content {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #222;
-    border-radius: 8px;
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    line-height: 1.8;
-    color: #b3b3b3;
-}
-
-#post-content h1, #post-content h2, #post-content h3 {
-    color: #66ff66;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-#post-content p {
-    margin-bottom: 15px;
-    color: #b3b3b3;
-}
-
-#post-content a {
-    color: #33cc33;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-#post-content a:hover {
-    color: #66ff66;
 }
 
 /* Responsive Styles */
