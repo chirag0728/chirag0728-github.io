@@ -33,7 +33,7 @@ body {
 }
 
 .sidebar h2 {
-    font-size: 2em; /* Slightly smaller font size for the sidebar title */
+    font-size: 2em;
     margin-bottom: 30px;
     color: #66ff66;
 }
@@ -72,7 +72,7 @@ hr {
 .content {
     flex: 1;
     padding: 30px;
-    margin-left: 290px; /* Offset for the fixed sidebar */
+    margin-left: 290px;
 }
 
 #posts-container {
@@ -82,76 +82,16 @@ hr {
 }
 
 /* Full-Width, Enhanced Post Card Styles */
+.post-card-link {
+    text-decoration: none;
+}
+
 .post-card {
     background-color: #1e1e1e;
     border: 2px solid #333;
     border-radius: 8px;
     padding: 30px;
-    width: calc(100% - 60px); /* Full width minus padding to account for side margins */
+    width: calc(100% - 60px);
     margin: 0 auto;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-
-.post-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
-}
-
-.post-card h3 {
-    font-size: 2.2em;
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #66ff66;
-}
-
-.post-card h3 .hashtag {
-    font-size: 0.9em; /* Smaller font for hashtags */
-    color: #b3b3b3;
-}
-
-.post-card .description {
-    color: #b3b3b3;
-    font-size: 1.3em;
-    margin-bottom: 20px;
-}
-
-.post-card .date {
-    font-size: 1em;
-    color: #888;
-    margin-top: 10px;
-}
-
-/* Tag Styles (e.g., #Podcast, #Mixed-Podcast) */
-.hashtag {
-    display: inline-block;
-    background-color: #333;
-    color: #66ff66;
-    padding: 3px 8px;
-    margin-right: 8px;
-    border-radius: 4px;
-    font-size: 0.9em; /* Reduced font size for hashtags */
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        padding: 20px;
-    }
-
-    .content {
-        margin-left: 0;
-    }
-
-    .post-card {
-        width: 100%; /* Full width on smaller screens */
-    }
-}
+    transition: transform 
