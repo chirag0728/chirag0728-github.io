@@ -11,21 +11,26 @@
     <div class="container">
         <!-- Sidebar -->
         <aside class="sidebar" aria-label="Sidebar Navigation">
-            <!-- Replace text title with a logo image if you have one -->
-            <img src="logo.png" alt="Portfolio Logo" class="logo-image">
+            <!-- Sidebar Logo -->
+            <img src="images/logo.png" alt="Portfolio Logo" class="logo-image">
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#" onclick="filterPosts('all')">Home</a></li>
-                    <li><a href="#" onclick="filterPosts('blog')">Blog</a></li>
-                    <li><a href="#" onclick="filterPosts('challenges')">Challenges</a></li>
-                    <li><a href="#" onclick="filterPosts('tools')">Tools</a></li>
-                    <li><a href="#" onclick="filterPosts('resources')">Resources</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Podcast</a></li>
+                    <li><a href="#">Vulns</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
             <hr>
             <ul class="external-links">
+                <li><a href="#">Twitch</a></li>
+                <li><a href="#">YouTube</a></li>
+                <li><a href="#">Twitter</a></li>
                 <li><a href="#">Discord</a></li>
                 <li><a href="#">GitHub</a></li>
+                <li><a href="#">Listen</a></li>
                 <li><a href="#">RSS Feed</a></li>
             </ul>
         </aside>
@@ -33,24 +38,22 @@
         <!-- Main Content Area -->
         <main class="content" aria-label="Main Content">
             <section id="posts-container" aria-label="Posts Container">
-                <!-- Each post card is now clickable and will lead to a separate page -->
-                <a href="post.html?id=post1" class="post-card-link">
-                    <article class="post-card" data-id="post1" data-category="blog" data-tags="web security">
-                        <h3>Understanding SQL Injection <span class="hashtag">#Web</span></h3>
-                        <p class="description">A detailed exploration of SQL injection techniques, including defense strategies and tools.</p>
-                        <p class="date">Posted: 11 November 2024</p>
-                    </article>
-                </a>
-                <a href="post.html?id=post2" class="post-card-link">
-                    <article class="post-card" data-id="post2" data-category="challenges" data-tags="linux privilege">
-                        <h3>Privilege Escalation in Linux <span class="hashtag">#Privilege Escalation</span></h3>
-                        <p class="description">An in-depth guide on privilege escalation methods in Linux environments.</p>
-                        <p class="date">Posted: 04 November 2024</p>
-                    </article>
-                </a>
+                <article class="post-card">
+                    <h3>Static Analysis, LLMs, and In-The-Wild Exploit Chains</h3>
+                    <div class="tags">
+                        <span class="hashtag">#Podcast</span>
+                        <span class="hashtag">#Mixed-Podcast</span>
+                    </div>
+                    <p class="description">
+                        Methodology is the theme of this week's episode. We cover posts about static analysis via CodeQL, as well as a novel blackbox binary querying language called QueryX.
+                    </p>
+                    <p class="date">11 November 2024</p>
+                </article>
+
+                <!-- Add more post cards as needed -->
+
             </section>
         </main>
     </div>
-    <script src="scripts/main.js"></script>
 </body>
 </html>
