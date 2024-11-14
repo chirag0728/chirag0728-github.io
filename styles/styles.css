@@ -9,20 +9,20 @@ body {
     font-family: 'PT Mono', monospace;
     background-color: #121212;  /* Dark background */
     color: #b3b3b3;  /* Light text color */
-    line-height: 1.8;
-    font-size: 20px; /* Larger base font size for readability */
+    line-height: 1.6;
+    font-size: 18px;
 }
 
 /* Container for the sidebar and content */
 .container {
     display: flex;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
 /* Sidebar Styles */
 .sidebar {
-    width: 250px; /* Wider sidebar */
+    width: 270px; /* Wider sidebar for emphasis */
     background-color: #1a1a1a; /* Dark sidebar */
     color: #66ff66; /* Terminal green */
     height: 100vh;
@@ -33,7 +33,7 @@ body {
 }
 
 .sidebar h2 {
-    font-size: 1.8em; /* Larger font size */
+    font-size: 2.5em; /* Large font size for prominent header */
     margin-bottom: 30px;
     color: #66ff66;
 }
@@ -44,14 +44,14 @@ body {
 }
 
 .nav-links li, .external-links li {
-    margin-bottom: 18px; /* Increased spacing for readability */
+    margin-bottom: 20px; /* Increased spacing for readability */
 }
 
 .nav-links li a, .external-links li a {
     color: #33cc33; /* Terminal green for links */
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1em; /* Larger font size */
+    font-size: 1.5em; /* Larger font size for sidebar links */
     display: inline-block;
     padding: 5px 0;
     transition: color 0.3s ease;
@@ -72,7 +72,7 @@ hr {
 .content {
     flex: 1;
     padding: 30px;
-    margin-left: 270px; /* Offset for the fixed sidebar */
+    margin-left: 290px; /* Offset for the fixed sidebar */
 }
 
 #posts-container {
@@ -86,7 +86,7 @@ hr {
     background-color: #222; /* Dark card background */
     border: 1px solid #333;
     border-radius: 8px;
-    padding: 20px;
+    padding: 25px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -96,25 +96,38 @@ hr {
 }
 
 .post-card h3 {
-    font-size: 1.6em; /* Larger font for titles */
-    margin-bottom: 12px;
+    font-size: 2.2em; /* Large font for titles */
+    font-weight: bold;
+    margin-bottom: 15px;
     color: #66ff66; /* Terminal green */
 }
 
 .post-card h3 .hashtag {
-    font-size: 0.9em;
+    font-size: 1em; /* Slightly smaller font for tags */
     color: #b3b3b3; /* Light gray for hashtags */
 }
 
 .post-card .description {
     color: #b3b3b3; /* Light gray for descriptions */
-    font-size: 1.1em; /* Larger font for readability */
+    font-size: 1.3em; /* Larger font for readability */
     margin-bottom: 20px;
 }
 
 .post-card .date {
     font-size: 1em;
     color: #888;
+    margin-top: 10px;
+}
+
+/* Tag Styles (e.g., #Podcast, #Mixed-Podcast) */
+.hashtag {
+    display: inline-block;
+    background-color: #333;
+    color: #66ff66;
+    padding: 3px 8px;
+    margin-right: 8px;
+    border-radius: 4px;
+    font-size: 1em; /* Consistent with smaller tag font */
 }
 
 /* Responsive Styles */
@@ -124,4 +137,13 @@ hr {
     }
 
     .sidebar {
-        width:
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 20px;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}
