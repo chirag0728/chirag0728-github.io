@@ -1,126 +1,207 @@
-/* Global and Reset Styles */
+/* Global Styles */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'PT Mono', monospace;
-    color: #e0e0e0;
 }
 
 body {
-    background-color: #121212;
+    font-family: 'PT Mono', monospace;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.8;
+    font-size: 18px; /* Larger base font size */
 }
 
 .container {
     display: flex;
-    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Sidebar Styling */
+/* Sidebar Styles */
 .sidebar {
     width: 250px;
-    background-color: #1e1e1e;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
+    background-color: #1a1a1a;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    height: 100vh;
 }
 
 .sidebar h2 {
-    color: #f5ba13;
-    margin-bottom: 1rem;
+    font-size: 1.75em;
+    margin-bottom: 20px;
+    color: #66ff66; /* Terminal green */
 }
 
 .nav-links, .external-links {
-    list-style-type: none;
+    list-style: none;
+    padding: 0;
 }
 
-.nav-links a, .external-links a {
-    color: #e0e0e0;
+.nav-links li, .external-links li {
+    margin-bottom: 10px;
+}
+
+.nav-links li a, .external-links li a {
+    color: #33cc33; /* Terminal green */
     text-decoration: none;
-    font-size: 1rem;
-    display: block;
+    font-weight: bold;
+    display: inline-block;
     padding: 5px 0;
+    transition: color 0.3s ease;
 }
 
-.nav-links a:hover, .external-links a:hover {
-    color: #f5ba13;
+.nav-links li a:hover, .external-links li a:hover {
+    color: #66ff66; /* Lighter green on hover */
 }
 
 hr {
-    border: 1px solid #444;
+    border: 0;
+    height: 1px;
+    background: #333;
     margin: 20px 0;
 }
 
-/* Main Content Styling */
+/* Main Content Area Styles */
 .content {
     flex: 1;
     padding: 20px;
 }
 
-.content h1 {
-    font-size: 2rem;
-    color: #f5ba13;
+header h1 {
+    font-size: 2.5em;
     margin-bottom: 20px;
+    color: #333;
 }
 
-/* Post Card Styling */
+#posts-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Post Card Styles */
 .post-card {
-    background-color: #1e1e1e;
-    border: 1px solid #333;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    position: relative;
-    transition: transform 0.2s ease;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .post-card:hover {
-    transform: scale(1.02);
-    border-color: #f5ba13;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .post-card h3 {
-    color: #f5ba13;
-    margin-bottom: 8px;
-}
-
-.hashtag {
-    font-size: 0.9rem;
-    color: #a0a0a0;
-    margin-left: 5px;
-}
-
-.description {
+    font-size: 1.5em;
     margin-bottom: 10px;
-    color: #e0e0e0;
+    color: #33cc33; /* Terminal green */
 }
 
-.date {
-    font-size: 0.8rem;
-    color: #777;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+.post-card h3 .hashtag {
+    font-size: 0.85em;
+    color: #66ff66; /* Lighter green for hashtags */
 }
 
-/* Responsive Sidebar for Smaller Screens */
+.post-card .description {
+    color: #555;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.post-card .date {
+    font-size: 1em;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.post-card button {
+    background-color: #33cc33; /* Terminal green */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.post-card button:hover {
+    background-color: #66ff66; /* Lighter green on hover */
+}
+
+/* Full Post Content Styles */
+#post-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.8;
+    font-size: 1.1em;
+}
+
+#post-content h1, #post-content h2, #post-content h3 {
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#post-content p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+#post-content a {
+    color: #33cc33; /* Terminal green */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#post-content a:hover {
+    color: #66ff66; /* Lighter green on hover */
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .sidebar {
-        width: 100%;
-        padding: 10px;
-    }
-
     .container {
         flex-direction: column;
     }
 
-    /* Styles for hidden content */
-.post-full-content {
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: 1px solid #333;
-    color: #e0e0e0;
-    line-height: 1.6;
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 10px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    #posts-container {
+        grid-template-columns: 1fr;
+    }
 }
 
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .post-card h3 {
+        font-size: 1.3em;
+    }
+
+    .post-card .description {
+        font-size: 1em;
+    }
 }
