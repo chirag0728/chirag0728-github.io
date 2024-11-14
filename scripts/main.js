@@ -1,9 +1,17 @@
 // scripts/main.js
 
+function togglePostContent(element) {
+    const fullContent = element.nextElementSibling.nextElementSibling;
+    if (fullContent.style.display === "none" || fullContent.style.display === "") {
+        fullContent.style.display = "block";
+    } else {
+        fullContent.style.display = "none";
+    }
+}
+
 function filterPosts(category) {
     const posts = document.querySelectorAll('.post-card');
     posts.forEach(post => {
-        // Show all posts if category is 'all', otherwise filter by category
         if (category === 'all' || post.getAttribute('data-category') === category) {
             post.style.display = 'block';
         } else {
@@ -12,7 +20,7 @@ function filterPosts(category) {
     });
 }
 
-// Filter posts by clicking on hashtags
+// Hashtag filter
 document.querySelectorAll('.hashtag').forEach(hashtag => {
     hashtag.addEventListener('click', function (event) {
         event.preventDefault();
