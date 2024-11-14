@@ -1,39 +1,35 @@
-// scripts/main.js
-
+// Toggle post content visibility on the main page
 function togglePostContent(element) {
-    const fullContent = element.nextElementSibling.nextElementSibling;
-    if (fullContent.style.display === "none" || fullContent.style.display === "") {
-        fullContent.style.display = "block";
-    } else {
-        fullContent.style.display = "none";
-    }
+    const postContent = element.nextElementSibling.nextElementSibling;
+    postContent.style.display = postContent.style.display === "none" ? "block" : "none";
 }
 
+// Function to navigate to the full post page
+function viewFullPost(postId) {
+    window.location.href = `post.html?post=${postId}`;
+}
+
+// Event listeners for filtering posts based on categories (if filter function is implemented)
 function filterPosts(category) {
-    const posts = document.querySelectorAll('.post-card');
-    posts.forEach(post => {
-        if (category === 'all' || post.getAttribute('data-category') === category) {
-            post.style.display = 'block';
+    const allPosts = document.querySelectorAll(".post-card");
+
+    allPosts.forEach(post => {
+        if (category === 'all' || post.dataset.category === category) {
+            post.style.display = "block";
         } else {
-            post.style.display = 'none';
+            post.style.display = "none";
         }
     });
 }
 
-// Hashtag filter
-document.querySelectorAll('.hashtag').forEach(hashtag => {
-    hashtag.addEventListener('click', function (event) {
-        event.preventDefault();
-        const tag = this.innerText.replace('#', '').toLowerCase();
-        const posts = document.querySelectorAll('.post-card');
-        
-        posts.forEach(post => {
-            const tags = post.getAttribute('data-tags').toLowerCase();
-            if (tags.includes(tag)) {
-                post.style.display = 'block';
-            } else {
-                post.style.display = 'none';
-            }
+// DOMContentLoaded event to attach click event listeners for read full post buttons
+document.addEventListener("DOMContentLoaded", function() {
+    const readMoreButtons = document.querySelectorAll(".post-card button");
+
+    readMoreButtons.forEach(button => {
+        button.addEventListener("click", function(event) {
+            const postId = event.target.closest(".post-card").getAttribute("data-id");
+            viewFullPost(postId);  // Navigate to the full post page
         });
     });
 });
